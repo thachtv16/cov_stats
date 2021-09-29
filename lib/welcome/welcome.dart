@@ -3,6 +3,7 @@ import 'package:cov_stats/app_scroll_behavior.dart';
 import 'package:cov_stats/app_string.dart';
 import 'package:cov_stats/app_styles.dart';
 import 'package:cov_stats/app_svg.dart';
+import 'package:cov_stats/bottom_bar.dart';
 import 'package:cov_stats/model/welcome_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -110,7 +111,7 @@ class _WelcomeState extends State<Welcome> {
                 children: [
                   TextButton(
                       onPressed: () {
-                        // todo handle to main app
+                        gotoBottomBar();
                       },
                       child: Text(
                         "Skip",
@@ -142,7 +143,7 @@ class _WelcomeState extends State<Welcome> {
                               duration: const Duration(microseconds: 400),
                               curve: Curves.easeIn);
                         } else {
-                          // todo handle to main app
+                          gotoBottomBar();
                         }
                       },
                       child: Text(
@@ -173,5 +174,10 @@ class _WelcomeState extends State<Welcome> {
                 blurRadius: 3)
           ]),
     );
+  }
+
+  void gotoBottomBar() {
+    Navigator.of(context).pushAndRemoveUntil(
+        MaterialPageRoute(builder: (_) => BottomBar()), (route) => false);
   }
 }

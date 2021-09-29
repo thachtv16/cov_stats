@@ -17,4 +17,7 @@ class AppStyles {
       fontSize: 12,
       fontFamily: AppFonts.medium,
       color: AppColor.colorTextPrimary);
+
+  static const TextStyle bottom_bar =
+      TextStyle(fontSize: 11, fontFamily: AppFonts.regular);
 }
