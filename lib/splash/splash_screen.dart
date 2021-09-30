@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:cov_stats/app_color.dart';
+import 'package:cov_stats/app_string.dart';
 import 'package:cov_stats/app_styles.dart';
+import 'package:cov_stats/app_svg.dart';
 import 'package:cov_stats/welcome/welcome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +19,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     super.initState();
@@ -53,13 +54,15 @@ class _SplashScreenState extends State<SplashScreen> {
                       alignment: Alignment.bottomCenter,
                       height: size.height* 1/2,
                       child: Container(
-                        child: SvgPicture.asset('assets/svg/ic_frame.svg'),
+                        child: SvgPicture.asset(
+                          AppSvg.SVG_COVID,
+                        ),
                       ) ,
                     ),
                     Container(
                       alignment: Alignment.topCenter,
                       height: size.height* 1 / 4,
-                      child: Text('COVSTATS',
+                      child: Text(AppString.convstats,
                           style: AppStyles.t28),
                     ),
                   ],
@@ -67,8 +70,8 @@ class _SplashScreenState extends State<SplashScreen> {
               )),
           Expanded(
               flex: 1,
-              child: Text('© Copyright COVSTATS 2020. All rights reserved',
-                  style: TextStyle(fontSize: 14))
+              child: Text(AppString.copyriht,
+                  style: AppStyles.t14),
           ),
         ],
 
