@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cov_stats/app_color.dart';
+import 'package:cov_stats/app_styles.dart';
 import 'package:cov_stats/welcome/welcome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       alignment: Alignment.topCenter,
                       height: size.height* 1 / 4,
                       child: Text('COVSTATS',
-                          style: TextStyle(fontSize: 28,color: AppColor.colorTextRed)),
+                          style: AppStyles.t28),
                     ),
                   ],
                 ),
