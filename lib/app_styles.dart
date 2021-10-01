@@ -18,6 +18,16 @@ class AppStyles {
       fontFamily: AppFonts.medium,
       color: AppColor.colorTextPrimary);
 
+  static const TextStyle t28 = TextStyle(
+    fontSize: 28,
+    fontFamily: AppFonts.regular,
+    color: AppColor.colorTextRed,
+  );
+  static const TextStyle t14 = TextStyle(
+    fontSize: 14,
+    fontFamily: AppFonts.regular,
+  );
+
   static const TextStyle bottom_bar =
       TextStyle(fontSize: 11, fontFamily: AppFonts.regular);
 }
